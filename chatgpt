@@ -14,3 +14,10 @@ def training_data(data):
  def index():
      if request.method == "post":
          data=request.form["data"]
+         res=openai.completion.create(
+         model="text-davinci-003",
+         prompt="training.data"(data)
+         tempratute=0.1)
+         return redirect(url_for("index"),results=res.choices[0].text)
+     result=request.args,get("result")
+     return rendor_template("index.html", result=result)
