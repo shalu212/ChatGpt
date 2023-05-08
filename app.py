@@ -10,16 +10,16 @@ def training_data(data):
     sentiment: positive
     text: {}
     sentiment: """.format(data.capitilzised())
- @app.route('/', methods=("GET","POST"))
+@app.route('/', methods=("GET","POST"))
 def index():
     if request.method == "POST":
-         data=request.form["data"]
-         res=openai.completion.create(
-         model="text-davinci-003",
-         prompt="training.data"(data)
-         tempratute=0.1)
-         return redirect(url_for("index"),results=res.choices[0].text)
-     result=request.args,get("result")
-     return rendor_template("index.html", result=result)
-   if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=9090, debug=True)
+        data=request.form["data"]
+        res=openai.completion.create(
+        model="text-davinci-003",
+        prompt="training.data"(data)
+        tempratute=0.1)
+        return redirect(url_for("index"),results=res.choices[0].text)
+    result=request.args,get("result")
+    return rendor_template("index.html", result=result)
+if __name__ == '__main__':
+   app.run(host='0.0.0.0', port=9090, debug=True)
