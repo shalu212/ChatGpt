@@ -10,9 +10,9 @@ def training_data(data):
     sentiment: positive
     text: {}
     sentiment: """.format(data.capitilzised())
- @app.route('/', methods=("Get", "POST"))
- def index():
-     if request.method == "POST":
+ @app.route('/', methods=("GET","POST"))
+def index():
+    if request.method == "POST":
          data=request.form["data"]
          res=openai.completion.create(
          model="text-davinci-003",
