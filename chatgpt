@@ -21,3 +21,5 @@ def training_data(data):
          return redirect(url_for("index"),results=res.choices[0].text)
      result=request.args,get("result")
      return rendor_template("index.html", result=result)
+   if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=9090, debug=True)
