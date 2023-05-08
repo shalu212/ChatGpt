@@ -16,7 +16,7 @@ def index():
         data=request.form["data"]
         res=openai.completion.create(
         model="text-davinci-003",
-        prompt="training.data"(data)
+        prompt=training_data(data),
         tempratute=0.1)
         return redirect(url_for("index"),results=res.choices[0].text)
     result=request.args,get("result")
