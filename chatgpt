@@ -1,0 +1,16 @@
+import openai
+from flask import Flask, redirect, rendor_templete, request, url_for
+app=flask(_name_)
+openai.api_key="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"
+def training_data(data):
+    return"""please predict text as positive or negitive.
+    text: you are a bad man
+    sentiment: negitive
+    text: you are good man
+    sentiment: positive
+    text: {}
+    sentiment: """.format(data.capitilzised())
+ @app.route('/', methods=("Get","post"))
+ def index():
+     if request.method == "post":
+         data=request.form["data"]
