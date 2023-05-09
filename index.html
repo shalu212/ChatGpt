@@ -1,13 +1,17 @@
-<!DOCKTYPE html!>
+<!DOCTYPE html>
+<html>
 <head>
-  <title>ChatGpt<title>
-    </head>
-    <body>
-      <h1> ChatGpt App by using API services from openai </h1>
-<form action="/" method="post">
-  <input type="text" name="data" placeholder="please  enter text here" required />
-  <input type="submit" value="submit data" />
-  {% if result %}
-  <div class="results"> {{result}} </div>
-  {% endif %}
-      </form>
+  <title>ChatGpt</title>
+</head>
+<body>
+  <h1>ChatGpt App using API services from OpenAI</h1>
+  <form action="/" method="post">
+    <input type="text" name="data" placeholder="Enter text here" required />
+    <input type="submit" value="Submit Data" />
+    {% if result %}
+      <div class="results">{{result}}</div>
+    {% endif %}
+  </form>
+</body>
+</html>
+
